@@ -2,9 +2,9 @@ name: Build and Run Flask App
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-run:
@@ -25,3 +25,4 @@ jobs:
         docker run -d -p 5000:5000 --name flask-container flask-app
         sleep 5
         curl http://localhost:5000
+echo "# Comentario de prueba" >> README.md
